@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNAKE WATER AND GUN GAME</title>
+</head>
+<body>
+    <img src="game.jfif">
+    <script>
+       /*Q: create a game the brower should ask you to get G S or W and then computer 
+       should be able to randomly generate these ketters and then declare te winner according to that */
+            let user = prompt("enter 'S' for snake, 'G' for gun and 'W' for water")
+            let cpu1 = Math.floor(Math.random() *  3);
+            let cpu = ["S","G","W"][cpu1]
+            const match = (user,cpu) =>{
+                if(cpu === user){
+    return 0
+  }
+  else if(cpu === "S" && user==="W"){
+    return "cpu"
+  }
+  else if(cpu === "S" && user==="G"){
+    return "user"
+  }
+  else if(cpu === "G" && user==="W"){
+    return "user"
+  }
+  else if(cpu === "G" && user==="S"){
+    return "cpu"
+  }
+  else if(cpu === "W" && user==="S"){
+    return "user"
+  }
+  else if(cpu === "W" && user==="G"){
+    return "cpu"
+  }
+}
+let result = match(cpu, user)
+document.write(`CPU:${cpu} and USER:${user} \nThe winner is: ${result} ` )
+
+
+    </script>
+</body>
+</html>

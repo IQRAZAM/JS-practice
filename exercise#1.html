@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>example 1 of the js course</title>
+    </head>
+    <body>
+        <img src="girl.jfif">
+        <script>
+            /* Q : write a JS programme to generate a random umber and store it
+            in a varaible. the programme then takes an inout from the user to tell them '
+            whether the guess was correct greater or smaller.100 -(no of guesses) was the score
+            of the user the programme is expected to terminate when the rightnumber is guessed*/
+        let a = Math.floor(Math.random() * 101);
+       let n;
+        let score = 100
+        alert("remember the number is from 0 to 100")
+        while(n !=a){
+            score = score - 1;
+             n = prompt("Guess the value of random number a ?")
+         n = Number.parseInt(n);
+         if(n>a){
+            alert("this number is greater than real value")
+         }else if(n<a){
+            alert("this number is smaller than real value")
+         }
+         else{
+            alert("yes you guessed it right")
+            alert(`you guessed the number in  ${100 - score} chances` );
+        }}
+        console.log(`your score is ${score}`)
+        </script>
+    </body>
+</html>
