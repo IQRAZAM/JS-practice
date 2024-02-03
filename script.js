@@ -175,3 +175,4 @@
     console.log(index)
     joke.innerHTML= char[index].joke
     
+    
