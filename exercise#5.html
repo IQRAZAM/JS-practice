@@ -2,15 +2,75 @@
     <head>
         <title>HACKERMAN EXERCISE </title>
         <style>
-
+            *{
+                background-color: black;
+                color: rgb(73, 255, 12);
+                font-size: larger;
+            }
         </style>
     </head>
     <body>
+        <h1>HACKERMAN</h1>
+        <h2>Beware of the SAFETY you get!!!</h2>
+       <video width="600" height="500" autoplay muted ><source src="hackman.mp4" type="video/mp4"></video>
         <script>
 //Q write a JS program to pretend to look like a hacker write an async function which will display the following output : 
 //initializing hack program....    hacking satrina uisername ....   found it .... trying to hack that inta id   ....... 
-
-
+          let p1 = async()=>{
+            return new Promise ((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve()
+                },2000)
+            
+            })
+          }
+          let p2 = async()=>{
+            return new Promise ((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve()
+                },2000)
+            
+            })
+          }
+          let p3 = async()=>{
+            return new Promise ((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve()
+                },4000)
+            
+            })
+          }
+          let p4 = async()=>{
+            return new Promise ((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve()
+                },2000)
+            
+            })
+          }
+          let p5 = async()=>{
+            return new Promise ((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve()
+                },2000)
+            
+            })
+          }
+          const run = async()=>{
+              document.write("initializing your hacking process<br>")
+            let a1 = await  p1()
+            document.write("getting someone's ID to hack !!! <br>")
+            let a2 =   await p2()
+            document.write("getting fariha's username<br>")
+            let a3 = await p3()
+            document.write("the username is Fariha@fairy231<br>")
+            let a4 = await p4()
+            document.write("Instagram with the username Fariha@fairy is being hacked!<br>")
+            let a5 = await p5()
+            document.write("downloading all the stuff inclusing images , videos and other data from ID<br>" )
+          }
+          run()
+           
         </script>
     </body>
 </html>

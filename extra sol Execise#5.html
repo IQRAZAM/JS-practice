@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HACKERMAN</title>
+</head>
+<style>
+   body{
+    text-align: center;
+    color: rgb(109, 243, 55);
+    background-color: black;
+    font-size: larger;
+   }
+</style>
+<body>
+    <div id="text"></div>
+    <script>
+        let a = [
+        "initializing your hacking process"
+        ,"checking for any viruses in the system"
+        ,"accessing secure data warehouse",
+        "hacking into the mainframe server",
+        "searching for hidden backdoors and vulnerabilities",
+        "gaining root access to all systems",
+        "downloading all files from the target's computer",
+        "installing malware on the target's device",
+        "sending a distress signal to the target's emergency broadcast system",
+        "causing a global cyber attack"
+        ];
+
+        const sleep = async(seconds)=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve(true)
+                },seconds * 1000)
+            })
+        }
+        const showHack = async(message)=>{
+           await sleep(2)
+           text.innerHTML = text.innerHTML + "<br>" +message
+            // console.log(message)
+        }
+        (async()=>{
+            for(let i=0; i<a.length; i++){
+                await showHack(a[i])
+            }
+        })()
+    </script>
+</body>
+
+</html>
