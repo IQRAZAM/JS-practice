@@ -2,21 +2,24 @@
     <head>
         <title>HACKERMAN EXERCISE </title>
         <style>
-            *{
+            #output{
                 background-color: black;
                 color: rgb(73, 255, 12);
                 font-size: larger;
+                text-align: center;
             }
         </style>
     </head>
     <body>
+        <div id="output">
         <h1>HACKERMAN</h1>
         <h2>Beware of the SAFETY you get!!!</h2>
        <video width="600" height="500" autoplay muted ><source src="hackman.mp4" type="video/mp4"></video>
+       </div>
         <script>
 //Q write a JS program to pretend to look like a hacker write an async function which will display the following output : 
 //initializing hack program....    hacking satrina uisername ....   found it .... trying to hack that inta id   ....... 
-          let p1 = async()=>{
+          /*let p1 = async()=>{
             return new Promise ((resolve,reject)=>{
                 setTimeout(()=>{
                     resolve()
@@ -69,7 +72,47 @@
             let a5 = await p5()
             document.write("downloading all the stuff inclusing images , videos and other data from ID<br>" )
           }
-          run()
+          run()*/
+
+
+          //////CAN USE OPTIMAL SOLUTION AS WELL 
+          // Generic function to create a promise with a delay
+          const output = document.getElementById("output");
+          const appendLine = (text) => {
+            output.innerHTML += text + "<br>";
+          } ;
+
+const createPromise = (delay) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve();
+        }, delay);
+    });
+};
+
+// Define the individual promises with their respective delays
+const p1 = () => createPromise(2000);
+const p2 = () => createPromise(2000);
+const p3 = () => createPromise(4000);
+const p4 = () => createPromise(2000);
+const p5 = () => createPromise(2000);
+
+const run = async () => {
+    appendLine("initializing your hacking process<br>");
+    await p1();
+    appendLine("getting someone's ID to hack !!! <br>");
+    await p2();
+    appendLine("getting fariha's username<br>");
+    await p3();
+    appendLine("the username is Fariha@fairy231<br>");
+    await p4();
+    appendLine("Instagram with the username Fariha@fairy is being hacked!<br>");
+    await p5();
+    appendLine("downloading all the stuff including images, videos, and other data from ID<br>");
+};
+
+run();
+
            
         </script>
     </body>
